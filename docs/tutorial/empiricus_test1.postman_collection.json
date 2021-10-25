@@ -1,0 +1,191 @@
+{
+	"info": {
+		"_postman_id": "42290faf-41a3-4429-bff3-9a6e825761ad",
+		"name": "empiricus_test1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all users with pagination",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "empiricus",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.0.21:5000/users?page=1",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"21"
+					],
+					"port": "5000",
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get stored user's info",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "empiricus",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.0.21:5000/do_user/test",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"21"
+					],
+					"port": "5000",
+					"path": [
+						"do_user",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete user's stored info",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "empiricus",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.0.21:5000/do_user/test",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"21"
+					],
+					"port": "5000",
+					"path": [
+						"do_user",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add a new user",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "empiricus",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "email",
+							"value": "test@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "Brasília",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://192.168.0.21:5000/user/add",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"21"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"add"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
